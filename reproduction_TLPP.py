@@ -12,8 +12,8 @@ from sklearn import svm
 from sklearn.neighbors import KNeighborsClassifier
 from tensor_function import Patch,getU,kmode_product
 
-image=loadmat('./data/Indian_pines.mat')['indian_pines_corrected']
-label=loadmat('./data/Indian_pines_gt.mat')['indian_pines_gt']
+image=loadmat('./Indian_pines.mat')['indian_pines_corrected']
+label=loadmat('./Indian_pines_gt.mat')['indian_pines_gt']
 num_Class = int(max(label.reshape(label.shape[0] * label.shape[1], 1)))
 Height,Width,Band=image.shape
 image=image.astype(float)
