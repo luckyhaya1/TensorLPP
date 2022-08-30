@@ -109,7 +109,7 @@ def getU(newshape,k_near,X_train,P,Band):
         
         lie=newu1.shape[1]
         for i in range(lie):
-            newu1[:,i]=newu1[:,i]/np.linalg.norm(newu1[:,i],2)
+            newu1[:,i]=newu1[:,i]/np.linalg.norm(newu1[:,i])
         U1=newu1.real.T
         
         for i in range(l):
@@ -121,7 +121,7 @@ def getU(newshape,k_near,X_train,P,Band):
         newu2=getvalvec(left,right,newshape[1])
         lie=newu2.shape[1]
         for i in range(lie):
-            newu2[:,i]=newu2[:,i]/np.linalg.norm(newu2[:,i],2)
+            newu2[:,i]=newu2[:,i]/np.linalg.norm(newu2[:,i])
         U2=newu2.real.T
         
         for i in range(l):
@@ -133,6 +133,6 @@ def getU(newshape,k_near,X_train,P,Band):
         newu3=getvalvec(left,right,newshape[2])
         lie=newu3.shape[1]
         for i in range(lie):
-            newu3[:,i]=newu3[:,i]/np.linalg.norm(newu3[:,i],2)
+            newu3[:,i]=newu3[:,i]/np.linalg.norm(newu3[:,i])
         U3=newu3.real.T
     return U1,U2,U3
